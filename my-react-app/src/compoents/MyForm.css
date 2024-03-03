@@ -1,0 +1,29 @@
+.my-form {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Drop shadow */
+  }
+  
+  .my-form label {
+    margin-bottom: 10px;
+  }
+  
+  .my-form input {
+    width: 30%;
+    padding: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .my-form button {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue submit button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .my-form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
