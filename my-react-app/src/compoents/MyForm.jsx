@@ -11,7 +11,6 @@ function MyForm() {
     address: '',
     drugallergy: '',
     congenitaldisease: '',
-    // Add more fields as needed
   });
 
   // Handle input change
