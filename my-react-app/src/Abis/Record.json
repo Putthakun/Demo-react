@@ -1,0 +1,73 @@
+// สมมติว่านี่คือ ABI ของ Smart Contract ที่คุณคัดลอกมาจาก Remix IDE
+const contractABI = [
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_firstName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_lastName",
+				"type": "string"
+			}
+		],
+		"name": "addName",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getName",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "people",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "firstName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "lastName",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
+
+// สร้าง JSON object จาก ABI
+const contractJSON = JSON.stringify(contractABI);
+
+// บันทึก JSON object ลงในไฟล์ ContractABI.json
+const fs = require('fs');
+fs.writeFile('ContractABI.json', contractJSON, (err) => {
+    if (err) throw err;
+    console.log('ABI saved to ContractABI.json');
+});
