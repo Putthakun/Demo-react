@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
-import Record from './Abis/Record.json'; // นำเข้า ABI ของ Smart Contract
+// import Record from './Abis/Record.json'; // นำเข้า ABI ของ Smart Contract
+// import Record  from '../Abis/Record ';
 
 function App() {
+ 
+  const contractAddress = '0xADB8412EB83fA9F92c80019F1400B2Fb41aeB702';
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
