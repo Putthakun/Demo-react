@@ -1,5 +1,4 @@
-// สมมติว่านี่คือ ABI ของ Smart Contract ที่คุณคัดลอกมาจาก Remix IDE
-const contractABI = [
+[
 	{
 		"inputs": [
 			{
@@ -61,13 +60,3 @@ const contractABI = [
 		"type": "function"
 	}
 ]
-
-// สร้าง JSON object จาก ABI
-const contractJSON = JSON.stringify(contractABI);
-
-// บันทึก JSON object ลงในไฟล์ ContractABI.json
-const fs = require('fs');
-fs.writeFile('ContractABI.json', contractJSON, (err) => {
-    if (err) throw err;
-    console.log('ABI saved to ContractABI.json');
-});

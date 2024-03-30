@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
 // import Record from './Abis/Record.json'; // นำเข้า ABI ของ Smart Contract
-// import Record  from '../Abis/Record ';
+// import { RecordABI }  from '/Abis/RecordABI.js ';
 
 function App() {
  
@@ -29,7 +29,7 @@ function App() {
     try {
       await window.ethereum.enable(); // ขออนุญาติให้เข้าถึงบัญชี MetaMask
       const accounts = await web3.eth.getAccounts();
-      const contractAddress = 'YOUR_CONTRACT_ADDRESS'; // ที่อยู่ของ Smart Contract
+      const contractAddress = 'contractAddress'; // ที่อยู่ของ Smart Contract
       const contract = new web3.eth.Contract(ContractABI, contractAddress);
 
       // เรียกใช้ฟังก์ชันใน Smart Contract เพื่อเพิ่มชื่อและนามสกุล
