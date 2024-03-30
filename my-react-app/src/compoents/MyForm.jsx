@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
-// import Record from './Abis/Record.json'; // นำเข้า ABI ของ Smart Contract
+import {useNavigate} from 'react-router-dom';
 import ContractABI from '../Abis/ContractABI';
 
 function App() {
  //0xDD883df7182Bb8519c7dEA2F99e64e8f4486C027
+   const navigate = useNavigate();
   const contractAddress = "0xDD883df7182Bb8519c7dEA2F99e64e8f4486C027";
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -35,6 +36,7 @@ function App() {
       // เรียกใช้ฟังก์ชันใน Smart Contract เพื่อเพิ่มชื่อและนามสกุล
       await contract.methods.addName(firstName, lastName).send({ from: accounts[0] });
       alert('Name added successfully!');
+      navigate(`/profile?firstName=${firstName}&lastName=${lastName}`);
     } catch (error) {
       console.error('Error:', error);
       alert('Failed to add name. Please check the console for errors.');
