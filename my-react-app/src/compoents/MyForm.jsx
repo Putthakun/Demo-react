@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Web3 from 'web3';
 // import Record from './Abis/Record.json'; // นำเข้า ABI ของ Smart Contract
-// import { RecordABI }  from '/Abis/RecordABI.js ';
+import ContractABI from '../Abis/ContractABI';
 
 function App() {
- 
-  const contractAddress = '0xADB8412EB83fA9F92c80019F1400B2Fb41aeB702';
+ //0xDD883df7182Bb8519c7dEA2F99e64e8f4486C027
+  const contractAddress = "0xDD883df7182Bb8519c7dEA2F99e64e8f4486C027";
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
@@ -29,8 +29,8 @@ function App() {
     try {
       await window.ethereum.enable(); // ขออนุญาติให้เข้าถึงบัญชี MetaMask
       const accounts = await web3.eth.getAccounts();
-      const contractAddress = 'contractAddress'; // ที่อยู่ของ Smart Contract
-      const contract = new web3.eth.Contract(ContractABI, contractAddress);
+      const contractAddress = '0xDD883df7182Bb8519c7dEA2F99e64e8f4486C027'; // ที่อยู่ของ Smart Contract
+      const contract = new web3.eth.Contract(ContractABI, "0xDD883df7182Bb8519c7dEA2F99e64e8f4486C027"  );
 
       // เรียกใช้ฟังก์ชันใน Smart Contract เพื่อเพิ่มชื่อและนามสกุล
       await contract.methods.addName(firstName, lastName).send({ from: accounts[0] });
