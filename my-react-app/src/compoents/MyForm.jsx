@@ -35,7 +35,7 @@ function App() {
 
       // เรียกใช้ฟังก์ชันใน Smart Contract เพื่อเพิ่มชื่อและนามสกุล
       await contract.methods.addName(firstName, lastName).send({ from: accounts[0] });
-      alert('Name added successfully!');
+      alert('Name added successfully!');0.
       navigate(`/profile?firstName=${firstName}&lastName=${lastName}`);
     } catch (error) {
       console.error('Error:', error);
